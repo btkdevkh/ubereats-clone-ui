@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/ub.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="main.js" defer></script>
+  <title>Uber Eats</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div>
+        <div class="__menu__burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <h1 class="__main__title">
+          <span class="__u">U</span>ber <span class="__eats">Eats</span>
+        </h1>
+      </div>
+
+      <button>Se connecter</button>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <section class="navbar">
+    <nav class="nav">
+      <div>
+        <button class="__connexion">Se connecter</button>
+
+        <div class="__links">
+          <a href="#">Créez un compte professionnel</a>
+          <a href="#">Ajoutez votre restaurant</a>
+          <a href="#">Devenez coursier-partenaire</a>
+        </div>
+      </div>
+
+      <footer class="__apps">
+        <div class="__logo-infos-container">
+        <img src="img/ub.png" alt="uber eats icon">
+        <span>Plus de fonctionnalités dans l'application.</span>
+        </div>
+
+        <div class="__btn">
+          <button class="__iphone">
+            <i class="fa-brands fa-apple"></i>
+            iPhone
+          </button>
+          <button class="__android">
+            <i class="fa-brands fa-android"></i>
+            Android
+          </button>
+        </div>
+      </footer>
+    </nav>
+  </section>
+
+  <!-- pub -->
+  <main>
+    <section class="pub">
+      <div class="container">
+        <h2>Vos plats préférés, <br />directement à votre porte</h2>
+      </div>
+    </section>
+
+    <!-- Delivery -->
+    <section class="delivery">
+      <div class="container">
+        <div class="__btn__container">
+          <button class="__first__btn">
+            <i class="fa-solid fa-bag-shopping"></i> Livraisons <i class="fa-solid fa-chevron-down"></i>
+          </button>
+    
+          <div class="btn__hidden">
+            <button class="__second__btn"><i class="fa-solid fa-truck"></i> Livraison</button>
+            <button class="__second__btn"><i class="fa-solid fa-person-walking-luggage"></i> À emporter</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="showcase">
+      <div class="container">
+        <div class="__grid">
+          <div>
+            <img src="img/sc-1.svg" alt="">
+            <h2>Aidez vos <br />collaborateurs à se restaurer</h2>
+            <a href="#">Créez un compte professionnel</a>
+          </div>
+
+          <div>
+            <img src="img/sc-2.svg" alt="">
+            <h2>Les plats de vos <br /> restaurants préférés, livrés chez vous</h2>
+            <a href="#">Ajoutez votre restaurant</a>
+          </div>
+
+          <div>
+            <img src="img/sc-3.svg" alt="">
+            <h2>Livrez avec Uber Eats</h2>
+            <a href="#">Devenez coursier-partenaire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location">
+      <div class="container">
+        <h2>Villes à proximité</h2>
+
+        <div id="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="__flex__footer__1">
+        <h2 class="__main__title_footer">
+          <span class="__u">U</span>ber <span class="__eats">Eats</span>
+        </h2>
+  
+        <div class="__flex__footer__2">
+          <img src="img/ios.svg" alt="">
+          <img src="img/android.png" alt="">
+        </div>
+        </div>
+
+        <hr>
+    </div>
+  </footer>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWJidGtkZXZqaW05MSIsImEiOiJja3R0cXNxYmIwM2J0MnBtbWgzMHpnbzBpIn0.2aoySEqBh3XRrXp3d2mg4g';
+    new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [2.333333, 48.866667],
+      zoom: 10
+    });
+  </script>
+</body>
+</html>
